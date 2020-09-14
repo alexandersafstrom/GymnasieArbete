@@ -7,8 +7,23 @@
     
     </head>
     <body>
-    
+        <label for="input">Input:</label>
+        <textarea name="input" rows="8" cols="40" id="input">jQueryScript.Net</textarea>
+        <hr>
+        <input type="button" name="md5" id="md5" value="Generate">
+        <hr>
+        <label for="output">Output: </label>
+        <textarea name="output" rows="8" cols="40" id="output">
+            </textarea
     
     </body>
+      
+            <footer>
+            jQuery(document).ready(function($){
+                $('#md5').click(function(){
+                $('#output').val($.MD5($('#input').val()));
+                });
+                });
+            </footer>       
     
 </html>
