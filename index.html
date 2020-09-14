@@ -1,36 +1,40 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.1/flatly/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="jquery.md5.min.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8">
+        var password="5f4dcc3b5aa765d61d8327deb882cf99";
+        var userInput = "";
+    
     jQuery(document).ready(function($) {
       $('#md5').click(function(){
-        $('#output').val($.MD5($('#input').val()));
+        userInput= $.MD5($('#input').val());
+        
+        if (userInput==password){
+         alert("Correct pass"); 
+        } else {
+         alert("Wrong passcode!"); 
+        }
       });
+      
+      
     });
   </script>
   <style>
   body { background-color: #ccc; }
   .container { margin: 150px auto; max-width: 900px; }
 </style>
+  
+  <script>
+    
+  </script>
+  
 </head>
 <body>
-  <div id="jquery-script-menu">
-<div class="jquery-script-center">
 
-
-<script type="text/javascript"
-src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script></div>
-<div class="jquery-script-clear"></div>
-</div>
-</div>
   <div class="container">
   <label for="input">Input: </label><textarea name="input" rows="3" cols="40" id="input" class="form-control">jQueryScript.Net</textarea>
   <hr>
